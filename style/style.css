@@ -1,28 +1,41 @@
 body {
-  background: #7bed9f;
+  background: #84eba5;
 }
 
-#waterrmelon {
-  height: 200px;
-  width: 200px;
-  border-radius: 15px;
-  border: 8px solid #13753c;
-  background: #ff4757;
+.watermelonContainer,
+.coordinates {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.coordinates {
+  top: 10%;
+}
+
+#watermelon {
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  border: 8px solid #13753c;
+  background: #ff4757;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px 20px 0px;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
-#waterrmelon .container {
+#watermelon .containerOfSeeds {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,14 +47,14 @@ body {
           justify-content: space-between;
 }
 
-#waterrmelon .seed {
+#watermelon .seed {
   width: 5px;
   height: 5px;
   background: black;
   border-radius: 50%;
 }
 
-#waterrmelon .seed li:nth-child(2n) {
+#watermelon .seed li:nth-child(2n) {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
