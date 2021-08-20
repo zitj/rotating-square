@@ -1,8 +1,24 @@
 const watermelon = document.getElementById('watermelon');
+const watermelonContainer = document.querySelector('.watermelonContainer');
 const x = document.getElementById('x');
 const y = document.getElementById('y');
+const rotation = document.getElementById('rotation');
+let rotationCounter = 1;
 
+let rotate;
 let mouseDown = false;
+
+const state = {
+	mouse: {
+		x: 0,
+		y: 0,
+	},
+	watermelon: {
+		x: 280,
+		y: 300,
+		rotation: 0,
+	},
+};
 
 for (let i = 0; i <= 7; i++) {
 	let addSeeds = '';
@@ -20,30 +36,17 @@ for (let i = 0; i <= 7; i++) {
 	watermelon.innerHTML += addSeeds;
 }
 
-watermelon.addEventListener('mousedown', (e) => {
-	console.log(e);
-	mouseDown = true;
-	console.log(mouseDown);
-	if (mouseDown) {
-	}
-});
+let watermelonCenter = {
+	x: watermelon.clientLeft + watermelon.clientWidth / 2,
+	y: watermelon.clientTop + watermelon.clientHeight / 2,
+};
 
-watermelon.addEventListener('mousemove', (e) => {
+watermelonContainer.addEventListener('mousemove', (e) => {
+	// let angle = Math.atan2(e.pageX - watermelonCenter.x, -(e.pageY - watermelonCenter.y)) * (180 / Math.PI);
 	x.innerText = `x = ${e.x}`;
 	y.innerText = `y = ${e.y}`;
-	if (e.y > 350 && e.x < 870) {
-		console.log(e.y - 350);
-		watermelon.style.transform = `rotate(-${e.y - 350}deg)`;
+	if (e.y > 330) {
+		watermelon.style.transform = `rotate(-${e.y - 360}deg)`;
+		rotation.innerText = `rotation = -${e.y - 360} deg`;
 	}
-	if (e.y > 350 && e.x > 870) {
-		console.log(e.y - 350);
-		watermelon.style.transform = `rotate(${e.y - 350}deg)`;
-	}
-});
-
-watermelon.addEventListener('mouseup', (e) => {
-	console.log(e);
-	mouseDown = false;
-	console.log(mouseDown);
-	watermelon.style.backgroundColor = '#ff4757';
 });

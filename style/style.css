@@ -11,6 +11,10 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.watermelonContainer {
+  padding: 150px;
+}
+
 .coordinates {
   top: 10%;
 }
@@ -19,7 +23,7 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 15px;
-  border: 8px solid #13753c;
+  border: 18px solid #13753c;
   background: #ff4757;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,8 +35,6 @@ body {
   cursor: grab;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 
 #watermelon .containerOfSeeds {

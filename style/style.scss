@@ -8,6 +8,9 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.watermelonContainer {
+	padding: 150px;
+}
 .coordinates {
 	top: 10%;
 }
@@ -15,14 +18,15 @@ body {
 	height: 200px;
 	width: 200px;
 	border-radius: 15px;
-	border: 8px solid #13753c;
+	border: 18px solid #13753c;
 	background: #ff4757;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 20px 20px 0px;
 	cursor: grab;
 	transition: 0.2s ease-in-out;
-	transform: rotate(0deg);
+	// transform-origin: center;
+
 	.containerOfSeeds {
 		width: 100%;
 		display: flex;
