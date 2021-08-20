@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 body {
 	background: #84eba5;
+	font-family: 'Rampart One', cursive;
 }
+
 .watermelonContainer,
 .coordinates {
 	position: absolute;
@@ -15,18 +19,22 @@ body {
 	top: 10%;
 }
 #watermelon {
+	position: absolute;
 	height: 200px;
 	width: 200px;
+	left: 700px;
+	top: 300px;
 	border-radius: 15px;
 	border: 18px solid #13753c;
+	transform-origin: center;
 	background: #ff4757;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 20px 20px 0px;
 	cursor: grab;
-	transition: 0.2s ease-in-out;
-	// transform-origin: center;
-
+	&:active {
+		cursor: grabbing;
+	}
 	.containerOfSeeds {
 		width: 100%;
 		display: flex;
